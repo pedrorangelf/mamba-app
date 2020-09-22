@@ -1,0 +1,30 @@
+<ion-content padding fixed>
+  <div class="logo">
+    <ion-row>
+      <ion-col>
+        <img src="assets/images/mamba.io.svg" alt="logo" width="40%">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <img src="assets/images/RECRUITING.svg" alt="logo" width="35%">
+      </ion-col>
+    </ion-row>
+  </div>
+  <div class="login-form">
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" pattern="email" required></ion-input>
+    </ion-item>   
+    <ion-item>
+      <ion-label position="floating">Senha</ion-label>
+      <ion-input type="password" required></ion-input>
+    </ion-item>
+  </div>
+  <div class="login-button">
+    <ion-button expand="block" color="mamba" (click)="login()">Entrar</ion-button>
+  </div>
+  <div class="div-or">
+    <p style="margin:0">Esqueci minha senha</p>
+  </div>
+</ion-content>

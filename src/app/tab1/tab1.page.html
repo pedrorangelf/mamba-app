@@ -1,0 +1,80 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar color="primary">
+      <ion-buttons slot="secondary">
+        <ion-button>
+          <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>Olá, Lucas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="pl-5">
+    <ion-text>
+      <h4>Vagas</h4>
+    </ion-text>
+    <ion-text>
+      <ion-label>
+        Posições Abertas
+      </ion-label>
+    </ion-text>
+  </div>
+
+  <ion-card>
+    <ion-item (click)="goToDetalhes(1)">
+      <ion-label class="ion-text-wrap">
+        <p>415 candidatos</p>
+        <ion-text color="primary">
+          <h3>Engenheiro de Software</h3>
+        </ion-text>
+      </ion-label>
+      <ion-badge slot="end" color="success">Aberto</ion-badge>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item href="#">
+      <ion-label class="ion-text-wrap">
+        <p>415 candidatos</p>
+        <ion-text color="primary">
+          <h3>Engenheiro de Software</h3>
+        </ion-text>
+      </ion-label>
+      <ion-badge slot="end" color="success">Aberto</ion-badge>
+    </ion-item>
+  </ion-card>
+
+  <div class="pl-5">
+    <ion-text>
+      <ion-label>
+        Posições Fechadas
+      </ion-label>
+    </ion-text>
+  </div>
+
+  <ion-card>
+    <ion-item href="#">
+      <ion-label class="ion-text-wrap">
+        <p>415 candidatos</p>
+        <ion-text color="primary">
+          <h3>Engenheiro de Software</h3>
+        </ion-text>
+      </ion-label>
+      <ion-badge slot="end" color="danger">Fechado</ion-badge>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item href="#">
+      <ion-label class="ion-text-wrap">
+        <p>415 candidatos</p>
+        <ion-text color="primary">
+          <h3>Engenheiro de Software</h3>
+        </ion-text>
+      </ion-label>
+      <ion-badge slot="end" color="danger">Fechado</ion-badge>
+    </ion-item>
+  </ion-card>
+
+</ion-content>
