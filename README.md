@@ -26,3 +26,5 @@ Após tudo instalado e configurado, abra o prompt de comando e navegue até a pa
 **No terminal acesse a pasta do repositorio e execute os comandos abaixo:**
 - npm install
 - ionic serve
+
+**AO EXECUTAR NO BROWSER LEMBRE-SE DE ATIVAR AS FERRAMENTAS DO DESENVOLVEDOR(F12) E SELECIONAR QUALQUER DISPOSITIVO PARA VISUALIZAR MELHOR.**
