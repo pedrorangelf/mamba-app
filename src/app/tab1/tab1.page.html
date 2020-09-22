@@ -21,27 +21,16 @@
     </ion-text>
   </div>
 
-  <ion-card>
-    <ion-item (click)="goToDetalhes(1)">
+  <ion-card *ngFor="let item of desafiosAbertos">
+    <ion-item (click)="goToDetalhes(item.id)">
       <ion-label class="ion-text-wrap">
-        <p>415 candidatos</p>
+        <p>{{item.totalInscricoes}} candidato(s)</p>
         <ion-text color="primary">
-          <h3>Engenheiro de Software</h3>
+          <h3>{{item.cargo}}</h3>
         </ion-text>
+        <p>{{item.tempoAbertura}}</p>
       </ion-label>
-      <ion-badge slot="end" color="success">Aberto</ion-badge>
-    </ion-item>
-  </ion-card>
-
-  <ion-card>
-    <ion-item href="#">
-      <ion-label class="ion-text-wrap">
-        <p>415 candidatos</p>
-        <ion-text color="primary">
-          <h3>Engenheiro de Software</h3>
-        </ion-text>
-      </ion-label>
-      <ion-badge slot="end" color="success">Aberto</ion-badge>
+      <ion-badge slot="end" color="success">{{item.statusDesafio}}</ion-badge>
     </ion-item>
   </ion-card>
 
@@ -53,27 +42,16 @@
     </ion-text>
   </div>
 
-  <ion-card>
-    <ion-item href="#">
+  <ion-card *ngFor="let item of desafiosFechados">
+    <ion-item>
       <ion-label class="ion-text-wrap">
-        <p>415 candidatos</p>
+        <p>{{item.totalInscricoes}} candidato(s)</p>
         <ion-text color="primary">
-          <h3>Engenheiro de Software</h3>
+          <h3>{{item.cargo}}</h3>
         </ion-text>
+        <p>{{item.tempoAbertura}}</p>
       </ion-label>
-      <ion-badge slot="end" color="danger">Fechado</ion-badge>
-    </ion-item>
-  </ion-card>
-
-  <ion-card>
-    <ion-item href="#">
-      <ion-label class="ion-text-wrap">
-        <p>415 candidatos</p>
-        <ion-text color="primary">
-          <h3>Engenheiro de Software</h3>
-        </ion-text>
-      </ion-label>
-      <ion-badge slot="end" color="danger">Fechado</ion-badge>
+      <ion-badge slot="end" color="danger">{{item.statusDesafio}}</ion-badge>
     </ion-item>
   </ion-card>
 

@@ -14,6 +14,7 @@ export class Tab1Page {
 
   constructor(public desafioService: DesafioService, public router: Router) {
     this.listarDesafiosAbertos();
+    this.listarDesafiosFechados();
   }
 
   listarDesafiosAbertos(){

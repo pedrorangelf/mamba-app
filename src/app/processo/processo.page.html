@@ -6,7 +6,7 @@
           <ion-icon name="arrow-back"></ion-icon>
         </ion-button>
       </ion-buttons>
-      <ion-title>Engenheiro de Software</ion-title>
+      <ion-title>{{detalhe.cargo}}</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -19,7 +19,7 @@
         <ion-text>
           <ion-label>
             <p>Data Início</p>
-            <p>25/06/2020</p>
+            <p>{{detalhe.dataAbertura}}</p>
           </ion-label>
         </ion-text>
       </ion-col>
@@ -27,45 +27,41 @@
         <ion-label class="x-small">
           Fechar Vaga
         </ion-label>
-        <ion-badge color="primary">Aberto</ion-badge>
+        <ion-badge color="primary">{{detalhe.statusDesafio}}</ion-badge>
       </ion-col>
     </ion-row>
    
   </div>
 
   <ion-card>
-    <ion-item href="/processo">
+    <ion-item>
       <ion-label class="ion-text-wrap">
         <ion-text color="Dark">
-          <h3>415 candidatos</h3>
+          <h3>{{detalhe.totalInscricoes}} candidato(s)</h3>
         </ion-text>
-        <p>Ultima inscrição há 3 horas</p>
+        <p>{{detalhe.tempoUltimaInscricao}}</p>
       </ion-label>
-      <ion-badge slot="end" color="success">Aberto</ion-badge>
     </ion-item>
   </ion-card>
 
   <ion-card>
-    <ion-item href="/processo">
+    <ion-item>
       <ion-label class="ion-text-wrap">
         <ion-text color="Dark">
-          <h3>415 candidatos</h3>
+          <h3>{{detalhe.tempoUltimaInicializacao}}</h3>
         </ion-text>
-        <p>Ultima inscrição há 3 horas</p>
       </ion-label>
-      <ion-badge slot="end" color="success">Aberto</ion-badge>
     </ion-item>
   </ion-card>
 
   <ion-card>
-    <ion-item href="/processo">
+    <ion-item>
       <ion-label class="ion-text-wrap">
         <ion-text color="Dark">
-          <h3>415 candidatos</h3>
+          <h3>{{detalhe.porcentagemConclusao}}% de conclusão</h3>
         </ion-text>
-        <p>Ultima inscrição há 3 horas</p>
+        <p>{{detalhe.tempoUltimaFinalizacao}}</p>
       </ion-label>
-      <ion-badge slot="end" color="success">Aberto</ion-badge>
     </ion-item>
   </ion-card>
   
