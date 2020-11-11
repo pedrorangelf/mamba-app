@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
+import { RotaService } from '../services/rota.service';
 import { DesafioService } from './desafio.service';
 
 @Component({
@@ -11,10 +12,13 @@ export class Tab1Page {
 
   desafiosAbertos: any[] = [];
   desafiosFechados: any[] = [];
+  nomeUsuario: string;
 
-  constructor(public desafioService: DesafioService, public router: Router) {
+  constructor(public desafioService: DesafioService, public router: Router, private dataService: RotaService) {
     this.listarDesafiosAbertos();
     this.listarDesafiosFechados();
+    const user = JSON.parse(localStorage.getItem('currentUser'));
+    this.nomeUsuario = user.nome;
   }
 
   listarDesafiosAbertos(){
@@ -31,8 +35,17 @@ export class Tab1Page {
     });
   }
 
-goToDetalhes(id: any){
-  this.router.navigate(['processo/' + id]);
+goToDetalhes(item: any){
+  console.log(item);
+  const navigationExtras: NavigationExtras = {
+    queryParams: {
+      desafio: JSON.stringify(item)
+    }
+  };
+
+  this.dataService.setData(item.id, item);
+  this.router.navigateByUrl('processo/' + item.id);
+  // this.router.navigate(['processo/', navigationExtras]);
 }
 
 }

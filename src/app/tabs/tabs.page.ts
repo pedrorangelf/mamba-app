@@ -8,10 +8,11 @@ import { Router } from '@angular/router';
 })
 export class TabsPage {
 
-  constructor(public router: Router) {}
+  constructor(public router: Router) { }
 
 
   sair() {
+    localStorage.removeItem('currentUser');
     this.router.navigate(['/login']);
   }
 

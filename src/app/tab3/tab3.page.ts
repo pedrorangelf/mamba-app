@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CargoService } from '../services/cargo.service';
 
 @Component({
   selector: 'app-tab3',

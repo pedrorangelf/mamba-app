@@ -11,9 +11,27 @@ export class ProcessoPage implements OnInit {
 
   detalhe: any = {};
 
-  constructor(public router: Router, private activatedRoute: ActivatedRoute, private processoService: ProcessoService) {
-    console.log(this.activatedRoute.snapshot.params.id);
-    this.obterDesafio(this.activatedRoute.snapshot.params.id);
+  constructor(private route: ActivatedRoute,
+              public router: Router,
+              private activatedRoute: ActivatedRoute,
+              private processoService: ProcessoService) {
+
+
+    // console.log(this.route.snapshot);
+
+    if (this.route.snapshot.data['desafio']) {
+      this.detalhe = this.route.snapshot.data['desafio'];
+    }
+
+    // this.route.queryParams.subscribe(params => {
+    //   this.detalhe = JSON.parse(this.route.snapshot.params.queryParams);
+    //   console.log(this.detalhe);
+    //   console.log(params.desafio);
+    //   if (params && params.desafio) {
+    //     this.detalhe = JSON.parse(params.desafio);
+    //   }
+    // });
+
   }
 
   ngOnInit() {
@@ -23,7 +41,7 @@ export class ProcessoPage implements OnInit {
     this.router.navigate(['/tabs']);
   }
 
-  obterDesafio(id: any){
+  obterDesafio(id: any) {
     this.processoService.listarDesafio(id).subscribe(result => {
       console.log(result);
       this.detalhe = result.data;
